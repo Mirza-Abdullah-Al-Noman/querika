@@ -1,0 +1,29 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="studentTutor/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Querika</title>
+</head>
+<body>
+	<section>
+		<div class="container p-3">
+			<div class="row">
+				<h5 class="card-header">Questions</h5>
+				<div class="card" th:each="v : ${value}">
+					<h5 class="card-header" th:text="${v [2]}"></h5>
+					<div class="card-body">
+						<p class="text-category" th:text="${v [0]}"></p>
+						<form action="view" method="post">
+							<button name="selectedQuestion" th:value="${v [1]}"
+								class="btn btn-primary col-md-0" type="Submit">View
+								question</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+</body>
+</html>

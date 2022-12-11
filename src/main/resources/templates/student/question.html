@@ -1,0 +1,39 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="student/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Querika</title>
+</head>
+<body>
+<section>
+<div class="container p-3">
+			<div class="row">
+			<div class="col-md-6 offset-md-3">
+			<div class="card">
+					<div class="card-header text-center fs-4">Question</div>
+					<div class="card-body">
+							<div class="mb-3">
+								<label>Details</label>
+								<p class="text-category" th:text="${sQuestion [0][0]}"></p>
+							</div>
+							<div class="mb-3">
+								<label>Course Name</label>
+								<p class="text-category" th:text="${sQuestion [0][2]}"></p>
+							</div>
+							<div class="mb-3">
+								<label>Answer</label>
+								<p class="text-category" th:if="${sQuestion [0][3] == null}">Not answered yet</p>
+								<p class="text-category" th:unless="${sQuestion [0][3] == null}" th:text = "${sQuestion [0][3]}"></p>
+							</div>
+						<!-- <p class="text-category" th:text="${v [0]}"></p>
+							<a href="#" class="btn btn-primary">Answer This Question</a> -->
+					</div>
+				</div>
+			</div>
+				
+			</div>
+		</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="studentTutor/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Querika</title>
+</head>
+<body>
+<section>
+<!-- <div class="container p-3">
+			<div class="row">
+				<h5 class="card-header" >My Answered Questions</h5>
+					<div class="card" th:each = "v : ${mQuestions}">
+						<h5 class="card-header" th:text="${v [1]}"></h5>
+						<div class="card-body" >
+							<p class="text-category" th:text="${v [0]}"></p>
+							<a href="#" class="btn btn-primary">Answer This Question</a>
+						</div>
+					</div>
+				</div>
+</div> -->
+<div class="container p-3">
+			<div class="row">
+				<!-- <div class="col-md-10 offset-md-1">
+					<div class="card">
+						<div class="card-header" >My Questions</div>
+						<div class = "mb-3" th:each = "question : ${questions}">
+								<p th:text = "${question.questionText}"></p>
+					</div>
+				</div> -->
+					<!-- <div class="card">
+						<h5 class="card-header" >My Questions</h5>
+						<div class="card-body" th:each = "question : ${questions}">
+							<h5 class="card-title">Special title treatment</h5>
+							<p class="text-category" th:text="${question.questionText}"></p>
+
+						</div>
+					</div> -->
+<!-- 					<div class="card">
+						<h5 class="card-header" >My Questions</h5>
+						<div class="card-body" th:each = "v : ${value}">
+							<h5 class="card-title" th:text="${v [1]}"></h5>
+							<p class="text-category" th:text="${v [0]}"></p>
+							<a href="#" class="btn btn-primary">View Question</a>
+						</div>
+					</div> -->
+					<h5 class="card-header" >My Questions</h5>
+					<div class="card" th:each = "v : ${mQuestions}">
+						<h5 class="card-header" th:text="${v [1]}"></h5>
+						<div class="card-body" >
+							<h6>Question</h6>
+							<p class="text-category" th:text="${v [0]}"></p>
+							<h6>Answer</h6>
+							<p class="text-category" th:text="${v [2]}"></p>
+						</div>
+					</div>
+				</div>
+
+		</div>
+</section>
+</body>
+</html>
